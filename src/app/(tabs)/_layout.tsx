@@ -1,0 +1,70 @@
+import { Ionicons } from "@expo/vector-icons";
+import { Tabs } from "expo-router/js-tabs";
+
+import { useTheme } from "@/theme/ThemeContext";
+import { useLayout } from "@/theme/useLayout";
+
+export default function TabLayout() {
+  const { colors } = useTheme();
+  const { narrow } = useLayout();
+
+  return (
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: colors.accent,
+        tabBarInactiveTintColor: colors.muted,
+        tabBarStyle: {
+          backgroundColor: colors.surface,
+          borderTopColor: colors.border,
+        },
+        tabBarLabelStyle: {
+          fontSize: narrow ? 9 : 11,
+          fontWeight: "600",
+        },
+        tabBarItemStyle: {
+          minHeight: 48,
+          paddingHorizontal: 0,
+        },
+        sceneStyle: { backgroundColor: colors.bg },
+      }}
+    >
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Танилцуулга",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="albums-outline" color={typeof color === "string" ? color : colors.muted} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="about"
+        options={{
+          title: "Миний тухай",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person-outline" color={typeof color === "string" ? color : colors.muted} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="works"
+        options={{
+          title: "Бүтээлүүд",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="grid-outline" color={typeof color === "string" ? color : colors.muted} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="contact"
+        options={{
+          title: "Холбоо барих",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="mail-outline" color={typeof color === "string" ? color : colors.muted} size={size} />
+          ),
+        }}
+      />
+    </Tabs>
+  );
+}
