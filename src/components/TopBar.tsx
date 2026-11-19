@@ -1,6 +1,6 @@
-import { Ionicons } from "@expo/vector-icons";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
+import { AppIcon } from "@/components/AppIcon";
 import { profile } from "@/data/profile";
 import { tapHaptic } from "@/lib/haptics";
 import { useEaster } from "@/theme/EasterContext";
@@ -33,7 +33,7 @@ export function TopBar() {
         }}
         style={styles.hit}
       >
-        <Ionicons
+        <AppIcon
           name={mode === "dark" ? "sunny-outline" : "moon-outline"}
           size={22}
           color={colors.text}

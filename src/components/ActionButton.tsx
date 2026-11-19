@@ -1,5 +1,6 @@
-import { Ionicons } from "@expo/vector-icons";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+
+import { AppIcon } from "@/components/AppIcon";
 
 import { tapHaptic } from "@/lib/haptics";
 import { radius } from "@/theme/colors";
@@ -31,7 +32,7 @@ export function ActionButton({ label, detail, icon = "open-outline", testID, onP
         { backgroundColor: colors.button, opacity: pressed ? 0.85 : 1 },
       ]}
     >
-      <Ionicons name={icon} size={20} color={colors.buttonText} />
+      <AppIcon name={icon} size={20} color={colors.buttonText} />
       <View style={styles.text}>
         <Text style={[styles.label, { color: colors.buttonText }]}>{label}</Text>
         {detail ? (

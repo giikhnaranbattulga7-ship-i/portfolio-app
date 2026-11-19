@@ -1,6 +1,6 @@
-import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router/js-tabs";
 
+import { AppIcon } from "@/components/AppIcon";
 import { useTheme } from "@/theme/ThemeContext";
 import { useLayout } from "@/theme/useLayout";
 
@@ -34,7 +34,7 @@ export default function TabLayout() {
         options={{
           title: "Танилцуулга",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="albums-outline" color={typeof color === "string" ? color : colors.muted} size={size} />
+            <AppIcon name="albums-outline" color={typeof color === "string" ? color : colors.muted} size={size} />
           ),
         }}
       />
@@ -43,7 +43,7 @@ export default function TabLayout() {
         options={{
           title: "Миний тухай",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="person-outline" color={typeof color === "string" ? color : colors.muted} size={size} />
+            <AppIcon name="person-outline" color={typeof color === "string" ? color : colors.muted} size={size} />
           ),
         }}
       />
@@ -52,7 +52,7 @@ export default function TabLayout() {
         options={{
           title: "Бүтээлүүд",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="grid-outline" color={typeof color === "string" ? color : colors.muted} size={size} />
+            <AppIcon name="grid-outline" color={typeof color === "string" ? color : colors.muted} size={size} />
           ),
         }}
       />
@@ -61,7 +61,7 @@ export default function TabLayout() {
         options={{
           title: "Холбоо барих",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="mail-outline" color={typeof color === "string" ? color : colors.muted} size={size} />
+            <AppIcon name="mail-outline" color={typeof color === "string" ? color : colors.muted} size={size} />
           ),
         }}
       />
