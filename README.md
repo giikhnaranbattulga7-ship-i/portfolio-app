@@ -6,9 +6,19 @@
 
 Код: https://github.com/giikhnaranbattulga7-ship-i/portfolio-app
 
-Вэб демо: https://portfolio-giikhnaran.vercel.app
-
 Хар, цагаан, ногоон өнгө. Доод цэс: **Танилцуулга**, **Миний тухай**, **Бүтээлүүд**, **Холбоо барих**.
+
+## Апп ажиллуулах
+
+Android APK (урьдчилан бүтээсэн):
+
+https://expo.dev/artifacts/eas/x4UKcSSeozMbZgU12svvctf8SlCdhNuzGrI6cK315b4.apk
+
+`eas build -p android --profile preview` командаар бүтээсэн. Түгээлт нь `internal`. Утас үл мэдэгдэх эх сурвалжаас суулгахыг (unknown sources) зөвшөөрөхийг асууж болно.
+
+Expo төслийн хуудас: https://expo.dev/accounts/giikhnaran/projects/giikhnaran-portfolio
+
+Вэб демо: https://portfolio-giikhnaran.vercel.app
 
 ## Заавал байх 5 хэсэг
 
@@ -44,6 +54,7 @@
 | expo-haptics | Товчны чичиргээ |
 | expo-sensors | Сэгсрэлт (Accelerometer) |
 | expo-image | Бүтээлийн зургийг дээрээс нь харуулах |
+| expo-font | Icon болон үсгийн фонт. Android APK-д фонт орно |
 | expo-linking / Linking | Имэйл, GitHub нээх |
 | expo-splash-screen | Эхлэх дэлгэц |
 | @expo/vector-icons | Доод цэсний дүрс (Ionicons) |
@@ -88,7 +99,7 @@ npx expo start --tunnel
 
 QR болон холбоос терминал дээр гарна. Энэ репозиторт бэлэн туннель холбоос байхгүй. Тэр нь таны Expo нэвтрэлт шаарддаг.
 
-Android APK:
+Бэлэн Android APK-г «Апп ажиллуулах» хэсгийн холбоосоор татна. Дахин бүтээх бол:
 
 ```bash
 npm install -g eas-cli
@@ -96,7 +107,7 @@ eas login
 eas build -p android --profile preview
 ```
 
-`eas.json` дотор `preview` профайл `buildType: apk`, `distribution: internal`. Дууссан APK-г Expo-ийн хуудаснаас татаж утсандаа суулгана. Энэ машиныг дээр APK бүтээгээгүй. EAS бүртгэл, интернет build шаардлагатай.
+`eas.json` дотор `preview` профайл `buildType: apk`, `distribution: internal`. Дууссан APK-г Expo-ийн хуудаснаас татаж утсандаа суулгана.
 
 ## Эх сурвалж
 
@@ -149,4 +160,4 @@ eas build -p android --profile preview
 ## Хязгаарлалт
 
 - Вэб дээр чичиргээ, сэгсрэх мэдрэгч ажиллахгүй. **Г** дээр удаан дарна.
-- APK болон байнгын Expo туннель холбоосыг энд урьдчилан гаргаагүй. Дээрх командыг өөрийн бүртгэлээр ажиллуулна.
+- Бэлэн APK «Апп ажиллуулах» хэсэгт байна. Байнгын Expo туннель холбоос энд байхгүй. Туннель өөрийн бүртгэлээр гаргана.

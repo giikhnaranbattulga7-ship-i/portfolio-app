@@ -39,7 +39,14 @@
           "imageWidth": 180
         }
       ],
-      "expo-image"
-    ]
+      "expo-image",
+      "expo-font"
+    ],
+    "owner": "giikhnaran",
+    "extra": {
+      "eas": {
+        "projectId": "a8890544-ddd2-44d6-a684-10105bdac7d9"
+      }
+    }
   }
 }
